@@ -1,0 +1,19 @@
+apply from: 'param.gradle'
+
+cargo {
+    containerId = 'tomcat8x'
+    port = 9090
+
+    deployable {
+        file = file("build/libs/$appName")
+    }
+
+    local {
+        homeDir = file('C:\\Apps\\APServer\\Tomcat\\apache-tomcat-8.5.23')
+        outputFile = file('build/output.log')
+        timeout = 60000
+        containerProperties {
+            property 'cargo.tomcat.ajp.port', 9099
+        }
+    }
+}

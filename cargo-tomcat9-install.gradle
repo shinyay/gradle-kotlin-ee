@@ -1,0 +1,18 @@
+apply from: 'param.gradle'
+
+cargo {
+    containerId = 'tomcat8x'
+    port = 9090
+
+    deployable {
+        file = file("build/libs/$appName")
+    }
+
+    local {
+            installer {
+                installUrl = 'http://apache.osuosl.org/tomcat/tomcat-9/v9.0.1/bin/apache-tomcat-9.0.1.zip'
+                downloadDir = file("$buildDir/download")
+                extractDir = file("$buildDir/tomcat9")
+            }
+    }
+}

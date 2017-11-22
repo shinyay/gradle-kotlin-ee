@@ -1,0 +1,5 @@
+ext {
+    appName = 'hello.war'
+    jdkVersion = '1.8'
+    cargoVersion = '1.4.5'
+}
