@@ -22,7 +22,9 @@ apply plugin: 'com.bmuschko.cargo'
 apply plugin: 'com.bmuschko.cargo-base'
 
 apply from: 'param.gradle'
-apply from: 'cargo-tomcat9-install.gradle'
+
+apply from: 'cargo-wildfly11-install.gradle'
+//apply from: 'cargo-tomcat9-install.gradle'
 
 repositories {
     jcenter()
@@ -32,10 +34,9 @@ repositories {
 dependencies {
     compile group: 'javax', name: 'javaee-api', version: '7.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    // https://bintray.com/bmuschko/gradle-plugins/com.bmuschko%3Agradle-cargo-plugin
 
-    cargo "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
-            "org.codehaus.cargo:cargo-ant:$cargoVersion"
+    cargo "org.codehaus.cargo:cargo-core-uberjar:1.6.5",
+            "org.codehaus.cargo:cargo-ant:1.6.5"
 }
 
 sourceCompatibility = jdkVersion

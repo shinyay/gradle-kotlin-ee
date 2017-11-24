@@ -1,0 +1,27 @@
+apply from: 'param.gradle'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+cargo {
+    containerId = 'wildfly11x'
+    port = 9090
+
+    deployable {
+        file = file("build/libs/$appName")
+    }
+
+    local {
+            installer {
+                //installUrl = 'http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip'
+                installUrl = 'http://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.zip'
+                downloadDir = file("$buildDir/download")
+                extractDir = file("$buildDir/wildfly11")
+            }
+        containerProperties { property 'cargo.jboss.configuration', 'standalone-full' }
+    }
+}

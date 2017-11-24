@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Gradle : com.shinyay : hello.war (exploded)">
-    <output-path>$PROJECT_DIR$/build/libs/exploded/hello.war</output-path>
+  <artifact type="exploded-war" name="Gradle : com.shinyay : demo.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/demo.war</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$">
         <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
@@ -8,9 +8,9 @@
     </properties>
     <root id="root">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/hello.war/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/demo.war/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="sample-app_main/web/Web Gradle : hello.war" />
+      <element id="javaee-facet-resources" facet="sample-app_main/web/Web Gradle : demo.war" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="sample-app_main" />
